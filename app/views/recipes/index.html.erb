@@ -12,8 +12,10 @@
       <div class="card-body">
         <%= recipe.description %><br/>
         <%= recipe.totaltime %><br/>
+        <div style="text-align: right">
+          <%= link_to 'See More Info', recipe, class: "btn btn-outline-primary" %>
+        </div>
       </div>
-      <%= link_to 'Show', recipe, class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
