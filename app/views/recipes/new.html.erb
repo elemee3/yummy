@@ -1,5 +1,9 @@
-<h1>New Recipe</h1>
+<%= render 'navbar' %>
 
-<%= render 'form' %>
+<div style="text-align: center">
+  <h1>New Recipe</h1>
+  <%= render 'form' %>
+  <br/>
+</div>
 
-<%= link_to 'Back', recipes_path %>
+<%= link_to 'Back', recipes_path, class: "btn btn-outline-primary", style: "margin-left: 30px" %>
