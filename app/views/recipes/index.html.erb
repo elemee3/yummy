@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipes</h1>
+
+<div class="card-container" style="display: flex; flex-wrap: wrap; max-width: 80vw; margin: 0 auto">
+  <% @recipes.each do |recipe| %>
+    <div class="card" style="width: 25vw; margin: 5px;">
+      <div class="card-header">
+        <%= recipe.name %>
+      </div>
+      <div class="card-body">
+        <%= recipe.description %><br/>
+        <%= recipe.totaltime %><br/>
+        <%= recipe.ingredients %><br/>
+        <%= recipe.instructions %>
+      </div>
+      <%= link_to 'Show', recipe, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+<br>
+
+<%= link_to 'New Recipe', new_recipe_path, class: "btn btn-success" %>
